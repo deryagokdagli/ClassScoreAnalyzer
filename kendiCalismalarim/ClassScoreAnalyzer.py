@@ -44,16 +44,13 @@ while True:
 ucuncuOgrenciNotlar = [ucuncuOgrenciNot1,ucuncuOgrenciNot2,ucuncuOgrenciNot3]
 
 #Öğrenci Ortalaması Ataması ve Hesaplaması
-birinciOgrenciOrtalama = sum(birinciOgrenciNotlar) / len(birinciOgrenciNotlar)
-ikinciOgrenciOrtalama = sum(ikinciOgrenciNotlar) / len(ikinciOgrenciNotlar)
-ucuncuOgrenciOrtalama = sum(ucuncuOgrenciNotlar) / len(ucuncuOgrenciNotlar)
+def ogrenciOrtalamasiHesapla(notlar):
+    return sum(notlar) / len(notlar)
 
-def birinciOgrenciHesapla(birinciOgrenciOrtalama):
-    return birinciOgrenciOrtalama
-def ikinciOgrenciHesapla(ikinciOgrenciOrtalama):
-    return ikinciOgrenciOrtalama
-def ucuncuOgrenciHesapla(ucuncuOgrenciOrtalama):
-    return ucuncuOgrenciOrtalama
+# Notlar zaten listeler halinde var:
+birinciOgrenciOrtalama = ogrenciOrtalamasiHesapla(birinciOgrenciNotlar)
+ikinciOgrenciOrtalama = ogrenciOrtalamasiHesapla(ikinciOgrenciNotlar)
+ucuncuOgrenciOrtalama = ogrenciOrtalamasiHesapla(ucuncuOgrenciNotlar)
 
 print(f"Öğrencilerin {dersAdi} dersinin ortalamaları şu şekildedir: ")
 print(f" {birinciOgrenci}: {birinciOgrenciOrtalama:.2f}")
